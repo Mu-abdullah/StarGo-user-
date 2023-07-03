@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "594264069078",
+    "project_id": "stargopizza",
+    "storage_bucket": "stargopizza.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594264069078:android:5a458b9edd662c59400a77",
+        "android_client_info": {
+          "package_name": "com.abdullah.user.pizza.star.go.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594264069078-atatbeipm5lbvrle4hr6lstlsk2mqh43.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNCYbRzlm_ChMBdC5ft17J9HWoI6y0OL8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594264069078-atatbeipm5lbvrle4hr6lstlsk2mqh43.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
