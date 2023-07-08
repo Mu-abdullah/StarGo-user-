@@ -11,7 +11,6 @@ class SaltPanCake extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    
       body: BlocBuilder<SaltCubit, SaltState>(
         builder: (context, state) {
           return state is SuccessGetSalt
@@ -23,16 +22,18 @@ class SaltPanCake extends StatelessWidget {
                               text: "لا يوجد اصناف هنا",
                               fontFamily: AssetDate.messiriFont),
                         )
-                      :  ListView.builder(
-                    itemCount: state.product.length,
-                    itemBuilder: (context, index) {
-                      final products = state.product[index];
-                      return CustomProductItem(
-                        product: products,
-                      );
-                    },
-                  ),
-              )
+                      : ListView.builder(
+                          physics: const NeverScrollableScrollPhysics(),
+                          shrinkWrap: true,
+                          itemCount: state.product.length,
+                          itemBuilder: (context, index) {
+                            final products = state.product[index];
+                            return CustomProductItem(
+                              product: products,
+                            );
+                          },
+                        ),
+                )
               : const Center(
                   child: CircularProgressIndicator(),
                 );

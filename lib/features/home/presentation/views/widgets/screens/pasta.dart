@@ -12,7 +12,6 @@ class PastaScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     
       body: BlocBuilder<PastaCubit, PastaState>(
         builder: (context, state) {
           return state is SuccessGetPasta
@@ -24,16 +23,18 @@ class PastaScreen extends StatelessWidget {
                               text: "لا يوجد اصناف هنا",
                               fontFamily: AssetDate.messiriFont),
                         )
-                      :  ListView.builder(
-                    itemCount: state.product.length,
-                    itemBuilder: (context, index) {
-                      final products = state.product[index];
-                      return CustomProductItem(
-                        product: products,
-                      );
-                    },
-                  ),
-              )
+                      : ListView.builder(
+                          physics: const NeverScrollableScrollPhysics(),
+                          shrinkWrap: true,
+                          itemCount: state.product.length,
+                          itemBuilder: (context, index) {
+                            final products = state.product[index];
+                            return CustomProductItem(
+                              product: products,
+                            );
+                          },
+                        ),
+                )
               : const Center(
                   child: CircularProgressIndicator(),
                 );

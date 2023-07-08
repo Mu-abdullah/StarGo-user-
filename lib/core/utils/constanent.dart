@@ -19,6 +19,8 @@ class Constant {
   static String onBoardSubTitle2 = 'خدمة عملاء تتواصل معك لافضل خدمة';
   static String onBoardSubTitle3 = 'توصيل الطلبات إليك في اسرع وقت';
 
+  static String extentionsKey = 'extentions';
+
   static String productKey = 'products';
   static String orderKey = 'orders';
 }

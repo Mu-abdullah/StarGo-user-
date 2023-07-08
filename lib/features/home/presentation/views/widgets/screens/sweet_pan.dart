@@ -23,6 +23,8 @@ class SweetPanCake extends StatelessWidget {
                               fontFamily: AssetDate.messiriFont),
                         )
                       : ListView.builder(
+                          physics: const NeverScrollableScrollPhysics(),
+                          shrinkWrap: true,
                           itemCount: state.product.length,
                           itemBuilder: (context, index) {
                             final products = state.product[index];

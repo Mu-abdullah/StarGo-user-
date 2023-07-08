@@ -20,6 +20,7 @@ class AssetDate {
   static const pasta = 'assets/images/pasta_item.png';
   static const cripe = 'assets/images/cripe_item.png';
   static const panCake = 'assets/images/pane_item.png';
+  static const zalabia = 'assets/images/zalabia.jpg';
 
   static const berlinFont = 'berlin';
   static const messiriFont = 'ElMessiri';

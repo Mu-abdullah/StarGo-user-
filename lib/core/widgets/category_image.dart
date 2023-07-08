@@ -23,7 +23,9 @@ class CustomCategoryImage extends StatelessWidget {
                   ? AssetDate.panCake
                   : product.category == Constant.sweetPanCakeCategory
                       ? AssetDate.panCake
-                      : AssetDate.pasta,
+                      : product.category == Constant.zalapiaCategory
+                          ? AssetDate.zalabia
+                          : AssetDate.pasta,
     );
   }
 }

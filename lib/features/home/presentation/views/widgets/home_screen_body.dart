@@ -5,6 +5,7 @@ import '../../../../../core/utils/size.dart';
 import 'carcousal_slider.dart';
 import 'categories_tab_view.dart';
 import 'custom_app_bar.dart';
+import 'extention_button.dart';
 
 class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({
@@ -37,10 +38,21 @@ class HomeScreenBody extends StatelessWidget {
             ],
           ),
         ),
-        const SliverFillRemaining(
-          child: CategoriesTabViews(),
+        SliverFillRemaining(
+          child: Column(
+            children: const [
+              ExtentionButton(),
+              Expanded(flex: 1, child: CategoriesTabViews()),
+            ],
+          ),
         ),
       ],
     );
   }
 }
+
+
+
+
+
+

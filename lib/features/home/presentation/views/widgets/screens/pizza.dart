@@ -22,16 +22,18 @@ class PizzaScreen extends StatelessWidget {
                               text: "لا يوجد اصناف هنا",
                               fontFamily: AssetDate.messiriFont),
                         )
-                      :  ListView.builder(
-                    itemCount: state.product.length,
-                    itemBuilder: (context, index) {
-                      final products = state.product[index];
-                      return CustomProductItem(
-                        product: products,
-                      );
-                    },
-                  ),
-              )
+                      : ListView.builder(
+                          physics: const NeverScrollableScrollPhysics(),
+                          shrinkWrap: true,
+                          itemCount: state.product.length,
+                          itemBuilder: (context, index) {
+                            final products = state.product[index];
+                            return CustomProductItem(
+                              product: products,
+                            );
+                          },
+                        ),
+                )
               : const Center(
                   child: CircularProgressIndicator(),
                 );
