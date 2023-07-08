@@ -14,6 +14,7 @@ import '../../features/home/presentation/manger/categories_cubits/salt_cubit/sal
 import '../../features/home/presentation/manger/categories_cubits/sweet_cubit/sweets_cubit.dart';
 import '../../features/home/presentation/manger/categories_screens_cubit/categories_screens_cubit.dart';
 import '../../features/home/presentation/manger/internet_checker/internet_checker_cubit.dart';
+import '../../features/home/presentation/manger/zalapia_cubit/zalapia_cubit.dart';
 import '../../features/home/presentation/views/home_screen_view.dart';
 import '../../features/splash_screen/splash_screen_view.dart';
 import 'constanent.dart';
@@ -61,6 +62,10 @@ abstract class AppRouter {
             ),
             BlocProvider(
               create: (context) => OrderCubit(),
+            ),
+            BlocProvider(
+              create: (context) => ZalapiaCubit()
+                ..fetchDocuments(category: Constant.zalapiaCategory),
             ),
           ],
           child: const HomeScreenView(),

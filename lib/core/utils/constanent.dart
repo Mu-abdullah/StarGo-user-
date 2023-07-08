@@ -2,12 +2,13 @@ import '../helper/shared_preferences.dart';
 
 class Constant {
   static String homeScreenItemBlobId = '14-7-758669';
-  
+
   static String pizzaCategory = 'pizza';
   static String cripeCategory = 'cripe';
   static String pastaCategory = 'pasta';
   static String sweetPanCakeCategory = 'sweet panCake';
   static String saltyPanCakeCategory = 'salty panCake';
+  static String zalapiaCategory = 'zalapia';
 
   static String orderBox = 'OrderBox';
 
@@ -19,12 +20,9 @@ class Constant {
   static String onBoardSubTitle3 = 'توصيل الطلبات إليك في اسرع وقت';
 
   static String productKey = 'products';
- static String orderKey = 'orders';
+  static String orderKey = 'orders';
 }
 
 String cashHelperOnBoardingKey = "onBoarding";
 bool? cashHelperOnBoardingValue =
     CacheHelper.getData(key: cashHelperOnBoardingKey);
-
-
-

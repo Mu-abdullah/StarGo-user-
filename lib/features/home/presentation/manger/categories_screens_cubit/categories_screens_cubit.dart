@@ -1,6 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:user/features/home/presentation/views/widgets/screens/zalapia.dart';
 import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/texts.dart';
 import '../../views/widgets/screens/pizza.dart';
@@ -50,6 +51,13 @@ class CategoriesScreensCubit extends Cubit<CategoriesScreensState> {
         fontFamily: AssetDate.messiriFont,
       ),
     ),
+    Padding(
+      padding: EdgeInsets.all(8.0),
+      child: TitleTexts(
+        text: "زلابيا",
+        fontFamily: AssetDate.messiriFont,
+      ),
+    ),
   ];
 
   List<Widget> categoryScreen = const [
@@ -58,7 +66,6 @@ class CategoriesScreensCubit extends Cubit<CategoriesScreensState> {
     PastaScreen(),
     SweetPanCake(),
     SaltPanCake(),
+    Zalapia(),
   ];
-
-  
 }
