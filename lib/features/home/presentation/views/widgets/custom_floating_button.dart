@@ -63,7 +63,7 @@ class CustomFloatingBotton extends StatelessWidget {
             TitleTexts(
               text: "اذهب إلي العربة",
               fontFamily: AssetDate.messiriFont,
-              fontSize: 30,
+              fontSize: 24,
             ),
           ],
         ),

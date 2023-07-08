@@ -20,3 +20,13 @@ class FailedGetZalapia extends ZalapiaState {
   final String errMessage;
   const FailedGetZalapia(this.errMessage);
 }
+
+
+class LoadingAddOrder extends ZalapiaState {}
+
+class SuccessAddOrder extends ZalapiaState {}
+
+class FauilerAddOrder extends ZalapiaState {
+  final String errorMsg;
+  const FauilerAddOrder(this.errorMsg);
+}

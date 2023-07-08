@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:user/features/cart/data/model/cart_model/cart_model.dart';
 
 import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/colors.dart';
 import '../../../../../core/utils/texts.dart';
 import '../../../data/model/products/product_model.dart';
+import '../../manger/extentions_cubit/extentions_cubit.dart';
 
 class ExtentionListViewItem extends StatelessWidget {
   const ExtentionListViewItem({
@@ -34,7 +37,11 @@ class ExtentionListViewItem extends StatelessWidget {
       ),
       trailing: TextButton(
         onPressed: () {
-          Navigator.pop(context);
+          final cart = CartModel(
+            name: product.name,
+            price: double.parse(product.priceL),
+          );
+          BlocProvider.of<ExtentionsCubit>(context).addOrder(context, cart);
         },
         child: const TitleTexts(
           fontFamily: AssetDate.messiriFont,

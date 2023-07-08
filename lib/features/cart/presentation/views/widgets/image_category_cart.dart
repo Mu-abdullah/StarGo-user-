@@ -7,7 +7,7 @@ import '../../../../../core/utils/constanent.dart';
 class CustomCardImage extends StatelessWidget {
   const CustomCardImage({
     super.key,
-    required this.product ,
+    required this.product,
   });
 
   final CartModel product;
@@ -23,7 +23,11 @@ class CustomCardImage extends StatelessWidget {
                   ? AssetDate.panCake
                   : product.category == Constant.sweetPanCakeCategory
                       ? AssetDate.panCake
-                      : AssetDate.pasta,
+                      : product.category == Constant.zalapiaCategory
+                          ? AssetDate.zalabia
+                          : product.category == Constant.pastaCategory
+                              ? AssetDate.pasta
+                              : AssetDate.logo,
     );
   }
 }

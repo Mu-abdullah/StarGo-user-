@@ -32,15 +32,20 @@ class CartScreenCubit extends Cubit<CartScreenState> {
   }
 
   void addCartListToFirestore(
-      {required List<CartModel> cartList, required id}) async {
+      {required String note,
+      required List<CartModel> cartList,
+      required id}) async {
     final CollectionReference cartRef =
         FirebaseFirestore.instance.collection(Constant.orderKey);
+
     List<Map<String, dynamic>> orders =
         cartList.map((cart) => cart.toFirestore()).toList();
+
     final userDate = UserModel(
       id: id,
       userName: CashHelperData().cashHelperNameValue,
       orders: orders,
+      note: note,
       timeOfOrder: DateTime.now(),
       userAdress: CashHelperData().cashHelperAdressValue,
       userphone: CashHelperData().cashHelperPhoneValue,

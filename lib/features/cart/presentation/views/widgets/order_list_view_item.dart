@@ -48,9 +48,12 @@ class OrderListViewItem extends StatelessWidget {
                       children: [
                         Expanded(
                           flex: 2,
-                          child: TitleTexts(
-                            text: order.name!,
-                            fontFamily: AssetDate.messiriFont,
+                          child: Align(
+                            alignment: Alignment.centerRight,
+                            child: TitleTexts(
+                              text: order.name!,
+                              fontFamily: AssetDate.messiriFont,
+                            ),
                           ),
                         ),
                         Expanded(
@@ -72,10 +75,14 @@ class OrderListViewItem extends StatelessWidget {
                         )
                       ],
                     ),
-                    SubTitleTexts(
-                      text: "الوصف :- ${order.description!}",
-                      fontFamily: AssetDate.messiriFont,
-                      maxLines: 1,
+                    Padding(
+                      padding: EdgeInsets.zero,
+                      child: SubTitleTexts(
+                        text:
+                            "الوصف :- ${order.description ?? "َاضافة ${order.name}"}",
+                        fontFamily: AssetDate.messiriFont,
+                        maxLines: 1,
+                      ),
                     ),
                     Row(
                       children: [
@@ -84,15 +91,26 @@ class OrderListViewItem extends StatelessWidget {
                           fontFamily: AssetDate.messiriFont,
                         ),
                         const Spacer(),
-                        SubTitleTexts(
-                          text: "الكمية :- ${order.quantity}",
-                          fontFamily: AssetDate.messiriFont,
+                        Padding(
+                          padding: EdgeInsets.zero,
+                          child: order.quantity == null
+                              ? null
+                              : SubTitleTexts(
+                                  text: "الكمية :- ${order.quantity!}",
+                                  fontFamily: AssetDate.messiriFont,
+                                ),
                         ),
                       ],
                     ),
-                    TitleTexts(
-                      text: "الاجمالي :- ${(order.totalPrice!).round()} جنيه",
-                      fontFamily: AssetDate.messiriFont,
+                    Padding(
+                      padding: EdgeInsets.zero,
+                      child: order.quantity == null
+                          ? null
+                          : TitleTexts(
+                              text:
+                                  "الاجمالي :- ${(order.totalPrice!).round()} جنيه",
+                              fontFamily: AssetDate.messiriFont,
+                            ),
                     ),
                   ],
                 ),

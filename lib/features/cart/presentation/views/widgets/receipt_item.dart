@@ -39,7 +39,7 @@ class ReceiptOrder extends StatelessWidget {
                     width: 15,
                   ),
                   SubTitleTexts(
-                    text: "عدد ( ${cart.quantity} )",
+                    text: "عدد ( ${cart.quantity?? "1"} )",
                     fontFamily: AssetDate.messiriFont,
                   ),
                 ],

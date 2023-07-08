@@ -23,7 +23,7 @@ class CartModel extends HiveObject {
   @HiveField(8)
   String? size;
   String? addNotes;
-  double? totalPrice ;
+  double? totalPrice;
 
   CartModel({
     this.name,
@@ -71,8 +71,8 @@ class CartModel extends HiveObject {
   }
 
   void calculateTotalPrice() {
-    if (price != null && quantity != null) {
-      totalPrice = price! * quantity!;
+    if (price != null) {
+      totalPrice = price! * (quantity ?? 1);
     }
   }
 }
