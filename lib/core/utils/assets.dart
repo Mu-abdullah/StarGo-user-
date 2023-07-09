@@ -1,7 +1,6 @@
 class AssetDate {
   static const logo = 'assets/images/logo.png';
   static const appName = 'Pizza Star Go';
-  static const appWahts = '01009885502';
   static const appCall = '01275008040';
   static const appFaceBook = 'https://www.facebook.com/pizza.Star.go/';
   static const appLoction = 'https://www.google.com/maps/dir/31.006272,29.8468038/31.1190435,29.7890732/@31.1189945,29.7893094,21z/data=!4m4!4m3!1m1!4e1!1m0?entry=ttu';

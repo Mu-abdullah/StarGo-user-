@@ -31,7 +31,7 @@ class WelcomeScreenBottomSheet extends StatelessWidget {
             ),
             onTap: () {
               final Uri uri =
-                  Uri.parse("https://wa.me/+2${AssetDate.appWahts}");
+                  Uri.parse("https://wa.me/+2${AssetDate.appCall}");
               _launchLink(url: uri);
             },
           ),
