@@ -49,7 +49,9 @@ class FinishOrderButton extends StatelessWidget {
                             controller: note,
                             type: TextInputType.text,
                             maxLines: 1,
-                            validate: (value) {}),
+                            validate: (value) {
+                              return null;
+                            }),
                   ),
                   const SizedBox(height: 5),
                   CustomButton(
