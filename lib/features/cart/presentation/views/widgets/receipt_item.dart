@@ -24,9 +24,16 @@ class ReceiptOrder extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TitleTexts(
-                text: "${cart.name}",
-                fontFamily: AssetDate.messiriFont,
+              SizedBox(
+                child: cart.quantity == null
+                    ? TitleTexts(
+                        text: "مع اضافة ${cart.name}",
+                        fontFamily: AssetDate.messiriFont,
+                      )
+                    : TitleTexts(
+                        text: "${cart.name}",
+                        fontFamily: AssetDate.messiriFont,
+                      ),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -39,7 +46,7 @@ class ReceiptOrder extends StatelessWidget {
                     width: 15,
                   ),
                   SubTitleTexts(
-                    text: "عدد ( ${cart.quantity?? "1"} )",
+                    text: "عدد ( ${cart.quantity ?? "1"} )",
                     fontFamily: AssetDate.messiriFont,
                   ),
                 ],

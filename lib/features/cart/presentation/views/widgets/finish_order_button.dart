@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
+import 'package:user/core/utils/colors.dart';
+import 'package:user/core/utils/texts.dart';
 
 import '../../../../../core/function/random_id.dart';
 import '../../../../../core/helper/cash_helper_data.dart';
@@ -52,6 +54,15 @@ class FinishOrderButton extends StatelessWidget {
                             validate: (value) {
                               return null;
                             }),
+                  ),
+                  const SizedBox(height: 5),
+                  Container(
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(15)),
+                    color: AppColors.secondColor.withOpacity(.5),
+                    child: const TitleTexts(
+                        text:
+                            "ممكن يختلف سعر التوصيل علي حسب المكان من 7 جنيه إلي 15 جنيه"),
                   ),
                   const SizedBox(height: 5),
                   CustomButton(
