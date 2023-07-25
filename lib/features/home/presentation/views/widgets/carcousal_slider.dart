@@ -38,7 +38,7 @@ class CarouselSliderWidget extends StatelessWidget {
                         ))
                     .toList(),
                 options: CarouselOptions(
-                  height: CustomSize().heightSize(context, .25),
+                  height: CustomSize().heightSize(context, .15),
                   initialPage: 0,
                   autoPlay: true,
                   enableInfiniteScroll: true,

@@ -24,8 +24,7 @@ class CripeScreen extends StatelessWidget {
                               fontFamily: AssetDate.messiriFont),
                         )
                       : ListView.builder(
-                          physics: const NeverScrollableScrollPhysics(),
-                          shrinkWrap: true,
+                         physics: const BouncingScrollPhysics(),
                           itemCount: state.product.length,
                           itemBuilder: (context, index) {
                             final products = state.product[index];

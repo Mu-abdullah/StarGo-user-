@@ -14,45 +14,29 @@ class HomeScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(
-          child: Column(
-            children: [
-              const CustomAppBar(),
-              Stack(
-                children: [
-                  Container(
-                    height: CustomSize().heightSize(context, .15),
-                    width: CustomSize().widthSize(context, 1),
-                    decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(50),
-                          bottomRight: Radius.circular(50),
-                        ),
-                        color: AppColors.primaryColor),
+    return Column(
+      children: [
+        const CustomAppBar(),
+        Stack(
+          children: [
+            Container(
+              height: CustomSize().heightSize(context, .1),
+              width: CustomSize().widthSize(context, 1),
+              decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(50),
+                    bottomRight: Radius.circular(50),
                   ),
-                  const CarouselSliderWidget(),
-                ],
-              ),
-            ],
-          ),
+                  color: AppColors.primaryColor),
+            ),
+            const CarouselSliderWidget(),
+          ],
         ),
-        SliverFillRemaining(
-          child: Column(
-            children: const [
-              ExtentionButton(),
-              Expanded(flex: 1, child: CategoriesTabViews()),
-            ],
-          ),
+        const ExtentionButton(),
+        const Expanded(
+          child: CategoriesTabViews(),
         ),
       ],
     );
   }
 }
-
-
-
-
-
-

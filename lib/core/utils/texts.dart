@@ -9,8 +9,8 @@ class SubTitleTexts extends StatelessWidget {
     this.subTitleColor,
     this.fontSize = 18,
     this.fontWeight = FontWeight.normal,
-    this.fontFamily = AssetDate.berlinFont,
-    this.maxLines = 2,
+    this.fontFamily = AssetDate.messiriFont,
+    this.maxLines = 4,
     this.textAlign = TextAlign.center,
   });
   final String text;

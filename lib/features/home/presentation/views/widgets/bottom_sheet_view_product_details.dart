@@ -95,9 +95,25 @@ class _ProductDetailsScreenViewState extends State<ProductDetailsScreenView> {
                       endIndent: CustomSize().widthSize(context, .35),
                     ),
                     const SizedBox(
+                      height: 5,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.zero,
+                      child: widget.product.priceM == 0 ||
+                              widget.product.priceL == 0
+                          ? Container(
+                              width: CustomSize().widthSize(context, 1),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                  color: AppColors.secondColor.withOpacity(.2)),
+                              child: const SubTitleTexts(
+                                  text: "يرجى اختيار الحجم المتاح حاليا"),
+                            )
+                          : null,
+                    ),
+                    const SizedBox(
                       height: 10,
                     ),
-                    // SizePriceList(product: widget.product),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -197,7 +213,6 @@ class _ProductDetailsScreenViewState extends State<ProductDetailsScreenView> {
                     const SizedBox(
                       height: 20,
                     ),
-
                     Row(
                       children: [
                         Expanded(

@@ -6,8 +6,8 @@ class Constant {
   static String pizzaCategory = 'pizza';
   static String cripeCategory = 'cripe';
   static String pastaCategory = 'pasta';
-  static String sweetPanCakeCategory = 'sweet panCake';
-  static String saltyPanCakeCategory = 'salty panCake';
+  static String sweetPanCakeCategory = 'sweetPanCake';
+  static String saltyPanCakeCategory = 'saltyPanCake';
   static String zalapiaCategory = 'zalapia';
 
   static String orderBox = 'OrderBox';
